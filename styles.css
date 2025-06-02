@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --bg: #161b22;
+  --primary: #00c6fb;
+  --secondary: #0582ca;
+  --white: #fff;
+  --gray: #8a8f98;
+  --cta: #3dfc89;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 1rem 1rem;
+  background: rgba(22, 27, 34, 0.95);
+  box-shadow: 0 2px 20px #00c6fb10;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  padding: 4rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta {
+  background: linear-gradient(90deg, var(--primary), var(--cta));
+  color: var(--bg);
+  border: none;
+  padding: 0.9rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 32px #00c6fb55;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.about, .features, .contact {
+  padding: 2.5rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h3, .features h3, .contact h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.about p {
+  color: var(--white);
+  font-size: 1.15rem;
+}
+
+.features ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.features li {
+  background: #20232a;
+  padding: 1.2rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 12px #00c6fb20;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: var(--cta);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact input, .contact textarea {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background: #23272f;
+  color: var(--white);
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact button {
+  align-self: flex-start;
+  background: var(--primary);
+  color: var(--bg);
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact button:hover {
+  background: var(--cta);
+  color: var(--bg);
+}
+
+.mapas {
+  padding: 2.5rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center; /* Centraliza o título */
+}
+
+.mapa-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.mapa-img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 198, 251, 0.4);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  color: var(--white);
+  font-size: 1rem;
+  background: #171c24;
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+  .features ul {
+    grid-template-columns: 1fr;
+  }
+  .logo-container h1 {
+    font-size: 1.4rem;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+.mapa-img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 198, 251, 0.25);
+}
